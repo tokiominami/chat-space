@@ -42,24 +42,23 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false|
 |e-mail|string|null: false, foreign_key: true|
-|message_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|password|string|null: false, foreign_key: true|
 
 ### Association
 - has_many :messages
-- belongs_to :group
+- has_many :groups_users
+  has_many :group, thorugh: :groups_users
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-|image|string|null: false, foreign_key: true|        
-|user_id|integer|null: false, foreign_key: true|
+|gruop_name|text|null: false|     
 
 ### Association
-- belongs_to :message
-- belongs_to :user
+- has_many :messages
+- has_many :gruop_users
+- has_many :users, through: :gruop_users
 
 ## ## groups_usersテーブル
 
