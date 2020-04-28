@@ -1,0 +1,66 @@
+.form
+    %form.new-message
+      .input-box
+        %input{class: "input-box__message", placeholder: "type a message", type: "text"}
+        %label{class: "input-box__image"}
+          = icon("fas", "image")
+          %input{type: "file", class: "input-box__image__file"}
+      %input{class: "submit-btn", type: "submit", value: "Send"}
+
+.form {
+      height: 90px;
+      background-color: #d2d2d2;
+      padding: 20px 40px;
+      display: flex;
+
+      &__message {
+         height: 50px;
+         width: 100%;
+         border-style: none;
+         padding: 0 10px;
+         position: relative;
+      }
+
+      .form__mask {
+        
+        &__image {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 20px;
+          cursor: pointer;
+          
+          .hidden {
+            display: none;
+          }
+        }
+      }
+
+      .submit-btn {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        color: #ffffff;
+        background-color: #38aef0;
+        cursor: pointer;
+      }
+    }
+
+    .messages
+    .message
+      .message-info
+        %p.message-info__name
+          masa
+        %p.message-info__data
+          2019/11/20(wed) 17.43.01
+      .message-text
+        おはよう
+    .message
+      .message-info
+        %p.message-info__name
+          masa
+        %p.message-info__data
+          2019/11/20(wed) 17.43.02
+      .message-text
+        今日は夜から雨
