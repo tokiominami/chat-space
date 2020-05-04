@@ -41,8 +41,8 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name  |string|null: false, index: true|
-|e_mail|string|null: false, foreign_key: true|
-|password|string|null: false, foreign_key: true|
+|e_mail|string|null: false|
+|password|string|null: false|
 
 ### Association
 - has_many :messages
